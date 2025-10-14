@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>Color de Fondo</title>
-</head>
+
 <body bgcolor="lightblue"></body>
 <head>
     <meta charset="UTF-8">
@@ -30,13 +28,58 @@
  </oi>
           <div>
         </boody>
+        
+        <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+        
+        
+        form {
+            font-family: 'Poppins', Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background-color: #005ea8;
+        }
+    </style>
 
 
-<body>
-    <h1>Formulario de Contacto</h1>
+    <body>
+    <h1>Formulario</h1>
     <p id="currentTime"></p>
     <script src="script.js"></script>
-    <form action="lesmar.php" method="POST"></form>
+    <form action="procesarcomentario.php" method="POST">
       
         <!-- Campo de texto -->
         <label for="nombre">Nombre:</label>
@@ -58,6 +101,7 @@
             <option value="consulta">Consulta</option>
             <option value="soporte">Soporte</option>
             <option value="otro">Otro</option>
+            <option value="chatear">Chat</option>
         </select>
         <br><br>
 
@@ -71,5 +115,3 @@
     </form>
 </body>
 </html>
-
-
