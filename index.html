@@ -1,25 +1,54 @@
-<html> 
-  <heat>
-    <titule> mi primer web </titule>
-    </head> 
-  <body>
-    <div id="una copia">
-          <h1> Emanuel ruiz bielma </h1>
-      <p> soy estudiante de la carrera de ingeneria en computacion de quinto semetres y espero aprovechar este curso para aprender a como crear paginas web, elegi esta carrera porque pense que era mas electronica y pues no resulto asi pero despues me gusto y pues me quede, es bonito esta carrera ya que hace programas y paginas o hasta juegos suena bien y mas porque ya nos dijeron cuanto pagan, me gustan los videojuegos ya que me distraigo mucho un poco tambien le meto duro al ejercico para estar bien y asi me desestreso de la escuela.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Color de Fondo</title>
+</head>
+<body bgcolor="lightblue"></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Básico</title>
+</head>
+
+
+<body>
+    <h1>Formulario de Contacto</h1>
+    <p id="currentTime"></p>
+    <script src="script.js"></script>
+    <form action="lesmar.php" method="POST"></form>
+      
+        <!-- Campo de texto -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+
+        <!-- Campo de correo -->
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
         
-        <ol> artista favorito 
-        <li> juan gabriel </li>
-        <li> Vicente fernandez </li>
-        <li> jose jose </li>
-        <li> bad buny </li>
+        <label for="numero de telefono"> Numeron telefonico:</label>
+        <input type="numero de telefono" id="numero de telefono" name="numero de telefono"required>
+        <br><br>
 
-<ol> juegos favoritos 
-<li> minecraft </li>
-<li> fornite </li>
-<li> roblox </li>
+        <!-- Campo de selección -->
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto">
+            <option value="consulta">Consulta</option>
+            <option value="soporte">Soporte</option>
+            <option value="otro">Otro</option>
+        </select>
+        <br><br>
+
+        <!-- Campo de texto largo -->
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+        <br><br>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
 
 
- </oi>
-          <div>
-        </boody>
-      </html>
