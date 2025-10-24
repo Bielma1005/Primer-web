@@ -1,89 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<body style="background-color: lightblue;">
-</body>
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emanuel Ruiz Bielma - Página</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
   <header>
-  <body>
-    <div id="una copia">
-      <h1><b><i>Emanuel ruiz bielma</i></b></h1>
-      <p style="color:red;"> soy estudiante de la carrera de ingeneria en computacion de quinto semetres y espero aprovechar este curso para aprender a como crear paginas web, elegi esta carrera porque pense que era mas electronica y pues no resulto asi pero despues me gusto y pues me quede, es bonito esta carrera ya que hace programas y paginas o hasta juegos suena bien y mas porque ya nos dijeron cuanto pagan, me gustan los videojuegos ya que me distraigo mucho un poco tambien le meto duro al ejercico para estar bien y asi me desestreso de la escuela.</p>
+    <h1><em><strong>Emanuel Ruiz Bielma</strong></em></h1>
+    <p>
+      Soy estudiante de la carrera de Ingeniería en Computación, voy en quinto semestre y espero aprovechar este curso para aprender a crear páginas web. Elegí esta carrera porque al principio pensé que sería más electrónica, pero después me gustó y me quedé. Me gusta porque se pueden hacer programas, páginas o hasta juegos. También me gustan los videojuegos porque me distraen; además hago ejercicio para desestresarme de la escuela.
+    </p>
   </header>
-  
-        <ol> JUEGOS FAVORITOS
-        <li> minecraft </li>
-        <li> fornite </li>
-        <li> roblox </li></ol>
 
-    <div>
-      
-      
-<p1><center>JUEGOS FAVORITOS: </center> </p1>
-<img src="https://farm2.staticflickr.com/1920/45579542082_f7017a09b3_o.jpg" alt="gatos bonitos">  
-</img>
+  <nav>
+    <ul>
+      <li><a href="#tabla">Tabla</a></li>
+      <li><a href="#formularios">Formulario</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+    </ul>
+  </nav>
 
+  <main>
 
-    <h1>Formulario</h1>
-    <p id="currentTime"></p>
-    
-    <script 
-         src="script.js">
-    </script>
-    
-    <form action="procesarcomentario.php" method="POST">
-      
-        <!-- Campo de texto -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <br><br>
+    <section id="multimedia">
+      <h2>Juegos favoritos</h2>
+      <ol>
+        <li>Minecraft</li>
+        <li>Fortnite</li>
+        <li>Roblox</li>
+      </ol>
 
-        <!-- Campo de correo -->
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        
-        <label for="numero de telefono"> Numeron telefonico:</label>
-        <input type="numero de telefono" id="numero de telefono" name="numero de telefono"required>
-        <br><br>
+      <div>
+        <figure style="width:300px; margin:0;">
+          <img src="https://cdn.wccftech.com/wp-content/uploads/2022/10/3NzeJeJsnVg-HD-HD-scaled.jpg" alt="Minecraft screenshot" style="width:100%; height:auto; display:block; border-radius:8px;"/>
+          <figcaption style="text-align:center;">Minecraft</figcaption>
+        </figure>
 
-        <!-- Campo de selección -->
-        <label for="asunto">Asunto:</label>
+        <figure style="width:300px; margin:0;">
+          <img src="https://cdn2.unrealengine.com/7up-v2-3840x2160-e11fc91a84d6.jpg" alt="Fortnite screenshot" style="width:100%; height:auto; display:block; border-radius:8px;"/>
+          <figcaption style="text-align:center;">Fortnite</figcaption>
+        </figure>
+
+        <figure style="width:300px; margin:0;">
+          <img src="https://images.rbxcdn.com/076d146437ffc79cebc36bf2ded91196" alt="Roblox logo" style="width:100%; height:auto; display:block; border-radius:8px;"/>
+          <figcaption style="text-align:center;">Roblox</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="tabla">
+      <h2>Ejemplo de tabla</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Juego</th>
+            <th>Género</th>
+            <th>Plataforma</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Minecraft</td>
+            <td>Aventura / Sandbox</td>
+            <td>PC / Consolas</td>
+          </tr>
+          <tr>
+            <td>Fortnite</td>
+            <td>Battle Royale</td>
+            <td>PC / Consolas / Móvil</td>
+          </tr>
+          <tr>
+            <td>Roblox</td>
+            <td>Plataforma / Creación</td>
+            <td>PC / Móvil</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="formularios">
+      <h2>Formulario</h2>
+      <p id="currentTime" aria-live="polite"></p>
+
+      <form action="procesarcomentario.php" method="POST" style="max-width:700px;">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Número telefónico:</label><br>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-() ]{7,20}" placeholder="(55) 1234-5678" required><br><br>
+
+        <label for="asunto">Asunto:</label><br>
         <select id="asunto" name="asunto">
-            <option value="consulta">Consulta</option>
-            <option value="soporte">Soporte</option>
-            <option value="otro">Otro</option>
-            <option value="chatear">Chat</option>
-        </select>
-        <br><br>
+          <option value="consulta">Consulta</option>
+          <option value="soporte">Soporte</option>
+          <option value="otro">Otro</option>
+          <option value="chat">Chat</option>
+        </select><br><br>
 
-        <!-- Campo de texto largo -->
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
-        <br><br>
-        
-        
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
 
-        <!-- Botón de envío -->
         <button type="submit">Enviar</button>
-        
-        <footer>
-        <div class="container">
-            <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    </form>
-    
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Muestra la hora actual en el elemento #currentTime
+    (function showCurrentTime(){
+      const el = document.getElementById('currentTime');
+      if(!el) return;
+      const now = new Date();
+      el.textContent = 'Hora actual: ' + now.toLocaleString('es-MX');
+    })();
+  </script>
+
 </body>
-
-
-
-
 </html>
