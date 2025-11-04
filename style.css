@@ -1,3 +1,4 @@
+
 /* Tipografía y cuerpo */
 body {
   background-color: lightblue;
@@ -64,13 +65,27 @@ nav a:hover { background-color: #3498db; }
 
 /* Secciones */
 section {
-  background-color: #FEE7E7;
+  background-color: rgba(0, 28, 255, 0.13);
   margin: 20px auto;
   padding: 20px;
   border-radius: 24px;
-  box-shadow: 0 0 15px rgba(245, 40, 145, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.65);
   max-width: 800px;
+
 }
+
+/*fondo de sitio oficial*/
+.car-img{
+  background: url(https://img.freepik.com/vector-gratis/photocall-juegos-neon-dibujado-mano_23-2149860761.jpg)no-repeat;
+  margin: 50px auto;
+  padding: 70px;
+  border-radius: 24px;
+  box-shadow: 0 0 15px rgba(245, 40, 145, 0.2);
+  max-width: 480px;
+  
+}
+
+
 
 /* Lista ordenada estilos */
 ol { color: #DF00FF; padding-left: 1.2rem; }
@@ -185,6 +200,112 @@ th, td {
   text-align: left;
 }
 
+ /* Estilo del contenedor */
+    .carrusel {
+      width: 300px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    /* Estilo de las imágenes */
+    .carrusel-imagenes {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300px; /* Ajustar según el número de imágenes */
+    }
+
+    .carrusel-imagenes img {
+      width: 300px;
+      flex-shrink: 0;
+      
+    }
+   
+
+    /* Botones de navegación */
+    .boton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .boton.izquierda {
+      left: 10px;
+    }
+
+    .boton.derecha {
+      right: 10px;
+    }
+    .botonGTAVI{
+      background-color: #223133;
+      font-family:monaco;
+      width: 250px;
+      padding:20px;
+      font-size:20px;
+      justify-content: center;
+    }
+    .botonRER{
+      background-color: #223133;
+      font-family:monaco;
+      width: 250px;
+      padding:20px;
+      font-size:20px;
+      display: flex;
+      margin-top: 5px;
+      justify-content: center;
+    }
+    .botonFFVR{
+      background-color: #223133;
+      font-family:monaco;
+      width: 250px;
+      padding:15px;
+      font-size:20px;
+      display: flex;
+      margin-top: 5px;
+      justify-content: center;
+    }
+    
+    #proximos-juegos {
+  color: white;
+
+}
+
+
+video {
+  width: 350px;
+ margin:auto;
+  /*padding: 15px;*/
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display:flex;
+  margin-left:320px;
+}
+
+.sitio button {
+  background-color: #0f4c75;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-family: Arial;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+}
+
+.sitio button:hover {
+  background-color: #3282b8;
+}
+
 /* Formulario */
 form {
   font-family: 'Poppins', Verdana, sans-serif;
@@ -197,6 +318,7 @@ form {
   margin: 0 auto;
 }
 label { font-weight: bold; }
+
 input, textarea, select {
   width: 100%;
   padding: 6px;
