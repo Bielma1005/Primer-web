@@ -22,6 +22,7 @@
       <li><a href="#tabla">Tabla</a></li>
       <li><a href="#formularios">Formulario</a></li>
       <li><a href="#multimedia">Multimedia</a></li>
+
     </ul>
   </nav>
 
@@ -33,16 +34,64 @@
         <li>Minecraft</li>
         <li>Fortnite</li>
         <li>Roblox</li>
+        <li>Halo</li>
+        <li>GTA v</li>
       </ol>
 
       <div class="figure">
-        <img class="game-img" src="https://cdn.wccftech.com/wp-content/uploads/2022/10/3NzeJeJsnVg-HD-HD-scaled.jpg" alt="Minecraft screenshot" />
-        <img class="game-img" src="https://cdn2.unrealengine.com/7up-v2-3840x2160-e11fc91a84d6.jpg" alt="Fortnite screenshot" />
-        <img class="game-img" src="https://images.rbxcdn.com/076d146437ffc79cebc36bf2ded91196" alt="Roblox logo" />
-        <img class="game-img" src="https://wallpapercave.com/wp/gGAlal4.jpg" alt="Halo logo"/>
-        <img class="game-img" src="https://tarfehat.com/wp-content/uploads/2023/02/555858.jpg" alt="Gtav logo"/>      
+        <div class="game-card">
+          <img class="game-img" src="https://cdn.wccftech.com/wp-content/uploads/2022/10/3NzeJeJsnVg-HD-HD-scaled.jpg" alt="Minecraft screenshot" />
+          <p class="game-name">Minecraft</p>
+          <div class="game-info-hover">
+            <h3>Minecraft</h3>
+            <p>Juego de construcción y aventuras en un mundo abierto compuesto por bloques. Explora mundos infinitos y construye lo que imagines.</p>
+            <a href="#" class="watch-video" onclick="openModal('minecraft'); return false;">Ver Video</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <img class="game-img" src="https://cdn2.unrealengine.com/7up-v2-3840x2160-e11fc91a84d6.jpg" alt="Fortnite screenshot" />
+          <p class="game-name">Fortnite</p>
+          <div class="game-info-hover">
+            <h3>Fortnite</h3>
+            <p>Battle Royale donde 100 jugadores luchan hasta que solo queda uno. Combina construcción con combate intenso.</p>
+            <a href="#" class="watch-video" onclick="openModal('fortnite'); return false;">Ver Video</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <img class="game-img" src="https://images.rbxcdn.com/076d146437ffc79cebc36bf2ded91196" alt="Roblox logo" />
+          <p class="game-name">Roblox</p>
+          <div class="game-info-hover">
+            <h3>Roblox</h3>
+            <p>Plataforma de creación de juegos donde los usuarios diseñan sus propias experiencias y juegan a millones de creaciones.</p>
+            <a href="#" class="watch-video" onclick="openModal('roblox'); return false;">Ver Video</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <img class="game-img" src="https://wallpapercave.com/wp/gGAlal4.jpg" alt="Halo logo"/>
+          <p class="game-name">Halo</p>
+          <div class="game-info-hover">
+            <h3>Halo</h3>
+            <p>Franquicia de ciencia ficción que sigue al Jefe Maestro en su lucha contra el Covenant. Disparos en primera persona épicos.</p>
+            <a href="#" class="watch-video" onclick="openModal('halo'); return false;">Ver Video</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <img class="game-img" src="https://tarfehat.com/wp-content/uploads/2023/02/555858.jpg" alt="GTA V logo"/>
+          <p class="game-name">GTA V</p>
+          <div class="game-info-hover">
+            <h3>GTA V</h3>
+            <p>Juego de mundo abierto ambientado en Los Santos. Sigue a tres criminales mientras realizan atracos y evaden autoridades.</p>
+            <a href="#" class="watch-video" onclick="openModal('gtav'); return false;">Ver Video</a>
+          </div>
+        </div>
       </div>
-    </section>
+      </section>
+
+
 
     <section id="tabla">
       <h2>Ejemplo de tabla</h2>
@@ -113,6 +162,86 @@
     </section>
 
   </main>
+   <!-- Modal para Minecraft -->
+  <div id="minecraft-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('minecraft')">&times;</button>
+      <div class="game-info">
+        <h2>Minecraft</h2>
+        <iframe class="game-video" src="https://www.youtube.com/embed/MmB9b5njVbA" title="Minecraft Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="game-description">
+          Minecraft es un juego de construcción y aventuras en un mundo abierto compuesto por bloques. 
+          Los jugadores pueden explorar mundos infinitos, construir estructuras desde simples casas hasta impresionantes castillos, 
+          y luchar contra criaturas en modos de supervivencia o creatividad.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Fortnite -->
+  <div id="fortnite-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('fortnite')">&times;</button>
+      <div class="game-info">
+        <h2>Fortnite</h2>
+        <iframe class="game-video" src="https://www.youtube.com/embed/WJW-bzXZM8M" title="Fortnite Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="game-description">
+          Fortnite es un juego de Battle Royale donde 100 jugadores luchan hasta que solo queda uno en pie. 
+          Combina la construcción con el combate, permitiendo a los jugadores recolectar recursos y construir estructuras defensivas. 
+          Con eventos en vivo y colaboraciones con franquicias populares, Fortnite se mantiene constantemente actualizado.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Roblox -->
+  <div id="roblox-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('roblox')">&times;</button>
+      <div class="game-info">
+        <h2>Roblox</h2>
+        <iframe class="game-video" src="https://www.youtube.com/embed/eAvXhNlO-rA" title="Roblox Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="game-description">
+          Roblox es una plataforma de creación de juegos que permite a los usuarios diseñar sus propias experiencias y jugar a una variedad 
+          de juegos creados por otros usuarios. Con millones de experiencias disponibles, desde simuladores hasta juegos de rol, 
+          Roblox ofrece diversión para todos los gustos.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Halo -->
+  <div id="halo-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('halo')">&times;</button>
+      <div class="game-info">
+        <h2>Halo</h2>
+        <iframe class="game-video" src="https://www.youtube.com/embed/PyMlV5_HRWk" title="Halo Infinite Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="game-description">
+          Halo es una franquicia de videojuegos de ciencia ficción que sigue las aventuras del Jefe Maestro, 
+          un supersoldado genéticamente mejorado, en su lucha contra el Covenant, una alianza de razas alienígenas. 
+          Con una jugabilidad de disparos en primera persona y una narrativa épica, Halo ha sido un pilar de los juegos de Xbox.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para GTA V -->
+  <div id="gtav-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('gtav')">&times;</button>
+      <div class="game-info">
+        <h2>Grand Theft Auto V</h2>
+        <iframe class="game-video" src="https://www.youtube.com/embed/QkkoHAzjnUs" title="GTA V Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="game-description">
+          Grand Theft Auto V es un juego de mundo abierto ambientado en la ciudad ficticia de Los Santos. 
+          Los jugadores siguen las historias entrelazadas de tres criminales mientras realizan atracos y evaden a las autoridades. 
+          Con un modo en línea masivo que permite a los jugadores crear sus propios personajes y participar en diversas actividades, 
+          GTA V ofrece una experiencia de juego extensa y diversa.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
@@ -127,6 +256,27 @@
       const now = new Date();
       el.textContent = 'Hora actual: ' + now.toLocaleString('es-MX');
     })();
+    
+    // Funciones para abrir y cerrar modales
+    function openModal(game) {
+      document.getElementById(`${game}-modal`).style.display = 'block';
+    }
+
+    function closeModal(game) {
+      document.getElementById(`${game}-modal`).style.display = 'none';
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.onclick = function(event) {
+      const modals = document.getElementsByClassName('modal');
+      for (let i = 0; i < modals.length; i++) {
+        if (event.target === modals[i]) {
+          modals[i].style.display = 'none';
+        }
+      }
+    }
+
+   
   </script>
 
 </body>
