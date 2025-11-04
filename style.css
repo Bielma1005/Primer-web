@@ -250,6 +250,7 @@ th, td {
       padding:20px;
       font-size:20px;
       justify-content: center;
+      
     }
     .botonRER{
       background-color: #223133;
@@ -278,15 +279,17 @@ th, td {
 }
 
 
-video {
-  width: 350px;
- margin:auto;
-  /*padding: 15px;*/
+
+.video-wrapper {
+  width: 320px;
+  margin: auto;
+  padding: 15px;
   margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius:10px;
   display:flex;
-  margin-left:320px;
+  margin-left:340px;
+  
+  
 }
 
 .sitio button {
