@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emanuel Ruiz Bielma - Página</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,10 +20,12 @@
 
   <nav>
     <ul>
-      <li><a href="#tabla">Tabla</a></li>
-      <li><a href="#formularios">Formulario</a></li>
+      
       <li><a href="#multimedia">Multimedia</a></li>
-
+      <li><a href="#tabla">Tabla</a></li>
+      <li><a href="#proximos juegos"> Nuevos Juegos</a></li>
+      <li><a href="comentarios.html">Comentarios</a></li>
+      
     </ul>
   </nav>
 
@@ -30,6 +33,7 @@
 
     <section id="multimedia">
       <h2>Juegos favoritos</h2>
+      
       <ol>
         <li>Minecraft</li>
         <li>Fortnite</li>
@@ -91,10 +95,35 @@
       </div>
       </section>
 
+    <section id="proximos-juegos">
+  <h2>Estos son los próximos lanzamientos más esperados para el 2026...</h2>
 
+  <div class="juegos">
+    <button class="botonGTAVI" onclick="mostrarVideo('gta6.mp4', 'https://www.rockstargames.com')">
+      Grand Theft Auto VI
+    </button>
+    <button class="botonRER" onclick="mostrarVideo('resident-evil-requiem.mp4', 'https://www.residentevil.com')">
+      Resident Evil Requiem
+    </button>
+    <button class="botonFFVR" onclick="mostrarVideo('final-fantasy7.mp4', 'https://www.square-enix-games.com')">
+      Final Fantasy VII Remake Intergrade
+    </button>
+  </div>
+
+  <div class="video-container">
+    <video id="video" controls>
+      <source src="" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+  </div>
+
+  <div class="sitio">
+    <button id="botonSitio" style="display: none;">Visitar sitio oficial</button>
+  </div>
+</section>
 
     <section id="tabla">
-      <h2>Ejemplo de tabla</h2>
+      <h2>Tabla comparativa</h2>
       <table>
         <thead>
           <tr>
@@ -131,36 +160,37 @@
         </tbody>
       </table>
     </section>
-
-    <section id="formularios">
-      <h2>Formulario</h2>
-      <p id="currentTime" aria-live="polite"></p>
-
-      <form action="procesarcomentario.php" method="POST">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br>
-
-        <label for="email">Correo Electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="telefono">Número telefónico:</label><br>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-() ]{7,20}" placeholder="(55) 1234-5678" required><br>
-
-        <label for="asunto">Asunto:</label><br>
-        <select id="asunto" name="asunto">
-          <option value="consulta">Consulta</option>
-          <option value="soporte">Soporte</option>
-          <option value="otro">Otro</option>
-          <option value="chat">Chat</option>
-        </select><br>
-
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br>
-
-        <button type="submit">Enviar</button>
-      </form>
+    
+    <section class="car-img">
+  
+       <div class="carrusel">
+    <div class="carrusel-imagenes" id="imagenes"> <a href="https://www.minecraft.net/es-es/download">
+      <img src="https://gamelevate.com/wp-content/uploads/2024/06/InArticle-GE.jpg" alt="Imagen 1"></a>
+     
+     <a href="https://www.fortnite.com/download?lang=es-ES">
+      <img src="https://wallpapercave.com/wp/wp6082390.jpg" alt="Imagen 2">
+    </a>
+     
+     <a href="https://www.roblox.com/es/download">
+      <img src="https://wallpapers.com/images/hd/roblox-pictures-kr9dxy2z296bf7b9.jpg" alt="Imagen 3">
+     </a>
+     
+     <a href="https://store.steampowered.com/agecheck/app/976730/?l=spanish "> 
+      <img src="https://gamingbolt.com/wp-content/uploads/2020/07/halo-infinite.jpg" alt="Imagen 4">
+     </a>
+     
+     <a href="https://www.rockstargames.com/es/gta-v ">
+      <img src="https://3238leblogdemarvelll-1278.kxcdn.com/wp-content/uploads/2013/09/grand-theft-auto-v-banniere.webp" alt="Imagen 5">
+    </a>
+    
+    </div>
+    <button class="boton izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
+    <button class="boton derecha" onclick="moverCarrusel(1)">&#10095;</button>
+  
+  </div>
     </section>
-
+    
+  
   </main>
    <!-- Modal para Minecraft -->
   <div id="minecraft-modal" class="modal">
@@ -248,36 +278,6 @@
       <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <script>
-    (function showCurrentTime(){
-      const el = document.getElementById('currentTime');
-      if(!el) return;
-      const now = new Date();
-      el.textContent = 'Hora actual: ' + now.toLocaleString('es-MX');
-    })();
-    
-    // Funciones para abrir y cerrar modales
-    function openModal(game) {
-      document.getElementById(`${game}-modal`).style.display = 'block';
-    }
-
-    function closeModal(game) {
-      document.getElementById(`${game}-modal`).style.display = 'none';
-    }
-
-    // Cerrar modal al hacer clic fuera del contenido
-    window.onclick = function(event) {
-      const modals = document.getElementsByClassName('modal');
-      for (let i = 0; i < modals.length; i++) {
-        if (event.target === modals[i]) {
-          modals[i].style.display = 'none';
-        }
-      }
-    }
-
-   
-  </script>
 
 </body>
 </html>
