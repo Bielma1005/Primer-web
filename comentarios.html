@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    
+      <section id="formularios">
+      <h2>Formulario</h2>
+      <p id="currentTime" aria-live="polite"></p>
+
+      <form action="procesarcomentario.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="telefono">Número telefónico:</label><br>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-() ]{7,20}" placeholder="(55) 1234-5678" required><br>
+
+        <label for="asunto">Asunto:</label><br>
+        <select id="asunto" name="asunto">
+          <option value="consulta">Consulta</option>
+          <option value="soporte">Soporte</option>
+          <option value="otro">Otro</option>
+          <option value="chat">Chat</option>
+        </select><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+     
+  </body>
+</html>
