@@ -35,19 +35,22 @@
     }
     
   
-  let urlSitio = "";
+  let sitioActual = "";
 
-  function mostrarVideo(videoSrc, sitioUrl) {
-    const video = document.getElementById("video");
+  function mostrarVideo(videoId, sitioUrl) {
+    const frame = document.getElementById("videoFrame");
     const botonSitio = document.getElementById("botonSitio");
 
-    video.src = videoSrc;
-    video.play();
+    // Asigna el video de YouTube al iframe
+    frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
-    urlSitio = sitioUrl;
+    // Guarda el sitio correspondiente
+    sitioActual = sitioUrl;
+
+    // Muestra el botón del sitio
     botonSitio.style.display = "inline-block";
   }
 
   document.getElementById("botonSitio").addEventListener("click", () => {
-    if (urlSitio) window.open(urlSitio, "_blank");
+    if (sitioActual) window.open(sitioActual, "_blank");
   });
