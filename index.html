@@ -95,30 +95,40 @@
       </div>
       </section>
 
-    <section id="proximos-juegos">
+  <section id="proximos-juegos">
   <h2>Estos son los próximos lanzamientos más esperados para el 2026...</h2>
 
   <div class="juegos">
-    <button class="botonGTAVI" onclick="mostrarVideo('gta6.mp4', 'https://www.rockstargames.com')">
-      Grand Theft Auto VI
-    </button>
-    <button class="botonRER" onclick="mostrarVideo('resident-evil-requiem.mp4', 'https://www.residentevil.com')">
-      Resident Evil Requiem
-    </button>
-    <button class="botonFFVR" onclick="mostrarVideo('final-fantasy7.mp4', 'https://www.square-enix-games.com')">
-      Final Fantasy VII Remake Intergrade
-    </button>
-  </div>
+  <button class="botonGTAVI"
+          onclick="mostrarVideo('VQRLujxTm3c', 'https://www.rockstargames.com/VI')">
+    Grand Theft Auto VI
+  </button>
+  
+  <button class="botonRER"
+          onclick="mostrarVideo('Thf1uQx3r9k', 'https://www.residentevil.com/')">
+    Resident Evil Requiem
+  </button>
+  
+  <button class="botonFFVR"
+          onclick="mostrarVideo('Ge73iBqc7o8', 'https://www.square-enix-games.com')">
+    Final Fantasy VII Remake Intergrade
+  </button>
+</div>
 
-  <div class="video-container">
-    <video id="video" controls>
-      <source src="" type="video/mp4">
-      Tu navegador no soporta videos HTML5.
-    </video>
+
+    <div class="video-wrapper" id="video-wrapper">
+      <iframe id="videoFrame" 
+              src=""
+              title="Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
   <div class="sitio">
-    <button id="botonSitio" style="display: none;">Visitar sitio oficial</button>
+    <button id="botonSitio" style="display:none;">Visitar sitio oficial</button>
   </div>
 </section>
 
